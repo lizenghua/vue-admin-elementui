@@ -1,0 +1,80 @@
+@import "./var";
+li {
+  list-style: none;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  outline: none;
+}
+
+a {
+  color: #999;
+  text-decoration: none;
+}
+// text align
+@each $var in (left, center, right) {
+  .text-#{$var} {
+    text-align: $var !important;
+  }
+}
+
+// border
+@each $dir in (top, right, bottom, left) {
+  .border-#{$dir} {
+    border-#{$dir}: 1px solid map-get($map: $colors, $key: "light-2");
+  }
+}
+
+// colors
+@each $colorKey, $color in $colors {
+  .text-#{$colorKey} {
+    color: $color;
+  }
+
+  .bg-#{$colorKey} {
+    background-color: $color;
+  }
+}
+
+// font size
+@each $sizeKey, $size in $font-sizes {
+  .fs-#{$sizeKey} {
+    font-size: $size;
+  }
+}
+
+// flex
+.d-flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+@each $key, $value in $flex-jc {
+  .jc-#{$key} {
+    justify-content: $value;
+  }
+}
+
+@each $key, $value in $flex-ai {
+  .ai-#{$key} {
+    align-items: $value;
+  }
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.flex-grow-1 {
+  flex-grow: 1;
+}

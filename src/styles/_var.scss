@@ -1,0 +1,31 @@
+$colors: (
+  "primary": #334960,
+  "light-1": #f1f1f1
+);
+$font-sizes: (
+  "md": 12px
+);
+$flex-jc: (
+  "start": flex-start,
+  "end": flex-end,
+  "center": center,
+  "between": space-between,
+  "around": space-around
+);
+
+$flex-ai: (
+  "start": flex-start,
+  "end": flex-end,
+  "center": center,
+  "stretch": stretch
+);
+$spacing-types: (
+  m: margin,
+  p: padding
+);
+$spacing-directions: (
+  t: top,
+  b: bottom,
+  l: left,
+  r: right
+);
